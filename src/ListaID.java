@@ -2,12 +2,20 @@ import java.util.NoSuchElementException;
 
 class Nodo{
     int value;
-    int next;
+    Nodo next;
+
+    public Nodo(int value) {
+        this.value = value;
+    }
 }
 
-public class Lista {
+public class ListaID {
+    private Nodo root;
     private int size;
     public void add(int x){
+        Nodo n = new Nodo(x);
+        n.next= root;
+        root = n;
         size++;
     }
     public int get(int pos){
@@ -26,6 +34,13 @@ public class Lista {
 
     public int size() {
         return size;
+    }
+
+    public static void main(String[] args) {
+        ListaID l = new ListaID();
+        l.add(3);
+        l.add(5);
+
     }
 }
 
