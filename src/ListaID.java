@@ -38,13 +38,19 @@ public class ListaID {
     @Override
     public String toString(){
         StringBuilder result = new StringBuilder("[");
+        Nodo p = root;
         /*asi como esta el root se rompe, hayq ue suar un auxiliar:
         * while(root != null){
         * result.append(root.value);
         * result.append(", ");
         * root = root.next;
         * bad code!!!!*/
-        
+        while (p != null){
+            result.append(p.value);
+            result.append(",");
+            p = p.next;
+        }
+
         result.append("]");
         return result.toString();
     }
@@ -52,7 +58,7 @@ public class ListaID {
         ListaID l = new ListaID();
         l.add(3);
         l.add(5);
-
+        System.out.println(l.toString());
     }
 }
 

@@ -41,13 +41,13 @@ public class ListaTest {
     public void testToStringNotEmptyList(){
         lista.add(3);
         lista.add(5);
-        assertEquals("[3, 5, ] ",lista.toString());
+        assertEquals("[5,3,]",lista.toString());
     }
     @Test
     public void testToStringNotEmptyListTwice(){
         lista.add(3);
         lista.add(5);
-        assertEquals("[3, 5, ] ",lista.toString());
-        assertEquals("[3, 5, ] ",lista.toString());
+        assertEquals("[5,3,]",lista.toString());
+        assertEquals("[5,3,]",lista.toString());
     }
 }
