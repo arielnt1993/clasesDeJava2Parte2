@@ -5,10 +5,10 @@ import  org.junit.Test;
 import java.util.NoSuchElementException;
 
 public class ListaTest {
-    private Lista lista;
+    private ListaID lista;
     @Before
     public void setup(){
-        lista = new Lista();
+        lista = new ListaID();
     }
     @Test
     public void testEmptyListIsEmpty(){
@@ -40,6 +40,14 @@ public class ListaTest {
     @Test
     public void testToStringNotEmptyList(){
         lista.add(3);
-        assertEquals("[3], ",lista.toString());
+        lista.add(5);
+        assertEquals("[3, 5, ] ",lista.toString());
+    }
+    @Test
+    public void testToStringNotEmptyListTwice(){
+        lista.add(3);
+        lista.add(5);
+        assertEquals("[3, 5, ] ",lista.toString());
+        assertEquals("[3, 5, ] ",lista.toString());
     }
 }

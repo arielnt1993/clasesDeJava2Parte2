@@ -35,7 +35,19 @@ public class ListaID {
     public int size() {
         return size;
     }
-
+    @Override
+    public String toString(){
+        StringBuilder result = new StringBuilder("[");
+        /*asi como esta el root se rompe, hayq ue suar un auxiliar:
+        * while(root != null){
+        * result.append(root.value);
+        * result.append(", ");
+        * root = root.next;
+        * bad code!!!!*/
+        
+        result.append("]");
+        return result.toString();
+    }
     public static void main(String[] args) {
         ListaID l = new ListaID();
         l.add(3);
