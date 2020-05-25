@@ -1,5 +1,10 @@
 import java.util.NoSuchElementException;
 
+class Nodo{
+    int value;
+    int next;
+}
+
 public class Lista {
     private int size;
     public void add(int x){
@@ -23,3 +28,5 @@ public class Lista {
         return size;
     }
 }
+
+
